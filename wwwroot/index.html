@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/x-icon" href="img/aumlogo.ico">
+    <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.css">
+    <link rel="stylesheet" href="/main.css">
+    <title>엄이건축 BIM : Simple Viewer</title>
+</head>
+
+<body>
+    <style>
+       /* 로딜스패너의 로고 교체*/
+       .adsk-viewing-viewer .forge-spinner img {
+            padding-top: 50px;
+            transform: scale(0.5);
+       /* 별도 폴더를 생성하여 이미지 파일관리*/
+            content:url('img/aumlee_logo3.png');
+            }
+       /* 뷰어하단의 프로그래스 바 크기설정*/    
+            .progressbg {
+                width: 98%;
+            }     
+
+    </style>
+    <div id="header">
+        <img class="logo" src="img/aumlee_logo6.png" alt="Autodesk Platform Services">
+        <span class="title">Simple Viewer</span>
+        <select name="models" id="models"></select>
+        <button id="upload" title="Upload New Model">Upload</button>
+        <input style="display: none" type="file" id="input">
+    </div>
+    <div id="preview"></div>
+    <div id="overlay"></div>
+    <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.js"></script>
+    <!--여기서 부터 시작한다 -------------->
+    <script src="/main.js" type="module"></script>
+
+</body>
+
+</html>
